@@ -40,14 +40,14 @@ const Contato = () => {
 
         <View style={styles.iconBox}>
           <MaterialIcons name="access-time" size={50} color="#fff" />
-          <Text style={styles.iconText}>Horário: 8h às 18h</Text>
+          <Text style={styles.iconText}>Horário: 7h às 17h</Text>
         </View>
       </View>
 
       <View style={styles.row}>
         <View style={styles.iconBox}>
           <Entypo name="instagram" size={50} color="#fff" />
-          <Text style={styles.iconText}></Text>
+          <Text style={styles.iconText}>@Vtec_automacao</Text>
         </View>
       </View>
 

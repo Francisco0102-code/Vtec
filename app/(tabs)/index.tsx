@@ -56,6 +56,14 @@ const Home = () => {
           <MaterialIcons name="info" size={24} color="#fff" />
           <Text style={styles.buttonText}>Sobre</Text>
         </TouchableOpacity>
+         <TouchableOpacity
+          style={styles.iconButton}
+          onPress={() => router.push('/pages/chat')}
+        >
+          <MaterialIcons name="home" size={24} color="#fff" />
+          <Text style={styles.buttonText}>Chat</Text>
+        </TouchableOpacity>
+
       </View>
 
       <Text style={styles.subtitle}>Soluções em tecnologia para o seu negócio</Text>
