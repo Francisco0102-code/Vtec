@@ -1,9 +1,9 @@
-import { View, Text, Pressable, StyleSheet, ImageBackground } from 'react-native';
-import React from 'react';
 import { MaterialIcons } from "@expo/vector-icons";
 import { router } from 'expo-router';
+import React from 'react';
+import { ImageBackground, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-const sobre = () => {
+const Sobre = () => {
   return (
     <View style={styles.container}>
       <Pressable style={styles.backButton} onPress={() => router.push('/')}>
@@ -15,6 +15,16 @@ const sobre = () => {
         resizeMode="cover"
       />
       <Text style={styles.title}>Sobre</Text>
+      <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+        <Text style={styles.text}>
+          <Text style={styles.bold}>Vtec: 25 Anos Conectando o Futuro{'\n\n'}</Text>
+          Há 25 anos, em uma pequena sala com poucos computadores e muita ambição, nascia a Vtec, uma empresa de informática e automação com um propósito claro: transformar tecnologia em solução.{'\n\n'}
+          Fundada por três amigos apaixonados por inovação, a Vtec começou oferecendo suporte técnico e montagem de sistemas personalizados. Naquela época, internet discada ainda era realidade — mas a visão da empresa já estava décadas à frente.{'\n\n'}
+          Com o tempo, a Vtec evoluiu. Investiu em automação comercial, desenvolveu sistemas próprios, formou parcerias estratégicas e conquistou a confiança de empresas de todos os portes. Quando a tecnologia mudou, a Vtec mudou junto: da informatização básica às soluções de IoT e inteligência artificial, sempre manteve o foco em atender com excelência.{'\n\n'}
+          Hoje, celebrando 25 anos de história, a Vtec é referência em tecnologia, reconhecida pela sua competência, compromisso e capacidade de antecipar tendências. Mais do que uma empresa, tornou-se uma parceira confiável para quem deseja crescer com inovação.{'\n\n'}
+          E o melhor? O futuro da Vtec ainda está só começando.
+        </Text>
+      </ScrollView>
     </View>
   );
 };
@@ -37,12 +47,15 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   title: {
-    fontSize: 24,
+    fontSize: 26,
     color: '#fff',
     fontWeight: 'bold',
-    marginTop: 40,
+    marginTop: 20,
+    marginBottom: 16,
+    textShadowColor: '#145a32',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2,
   },
-
   ImageBackground: {
     flex: 1,
     width: '100%',
@@ -54,9 +67,25 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    opacity: 0.5, // Ajuste a opacidade conforme necessário
-    zIndex: -1, // Certifique-se de que a imagem fique atrás dos outros elementos
+    opacity: 0.5,
+    zIndex: -1,
+  },
+  scrollContent: {
+    paddingHorizontal: 24,
+    paddingBottom: 40,
+    alignItems: 'flex-start',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 16,
+    lineHeight: 24,
+    marginTop: 10,
+  },
+  bold: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    color: '#fff',
   },
 });
 
-export default sobre;
+export default Sobre;
