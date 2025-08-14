@@ -1,5 +1,5 @@
 import { MaterialIcons } from '@expo/vector-icons'
-import { useRouter } from 'expo-router'
+import { Tabs, useRouter } from 'expo-router'
 import React, { useState } from 'react'
 import { ImageBackground, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 
@@ -87,6 +87,7 @@ const Home = () => {
         <MaterialIcons name="send" size={22} color="#fff" />
         <Text style={styles.sendButtonText}>Enviar Avaliação</Text>
       </TouchableOpacity>
+      
     </View>
   )
 }
